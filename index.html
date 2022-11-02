@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Coding UTF8, UA-Compatible & Viewport-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Enllaçar Javascript -->
+        <script src="index.js"></script>
+        <!--Titol de la pagina-->
+        <TITLE> Buscamines </TITLE>
+    </head>  
+    <body>
+        <!-- 2 inputs que indiquin les dimensions de l'àrea de joc.  -->
+        <input id="inputRow" type="number" placeholder="Number y">
+        <input id="inputCol" type="number" placeholder="Number x">
+    
+        <!-- 1 botó que creï el "taulell" -->
+        <button onclick="inicialitzaJoc()">Inicia Joc</button> 
+
+        <!-- 1 div que contingui el taulell. -->
+        <div id="taula"></div>
+        <!-- Es podría fer enllaçan amb un arxiu css, pero com sol es aixo, he decidit fer una etiqueta style. -->
+        <style>
+
+            td{
+                border: black solid 1px;
+                padding: 14px;
+
+            }
+        </style>
+    </body>
+</html>
