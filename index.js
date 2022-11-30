@@ -1,4 +1,8 @@
-var matrix = null;
+let rows = document.querySelector("tbody").children
+let matrix = []
+for (var i = 0; i < rows.length; i++) {
+    matrix.push(rows[i].children)
+}
 
 // Funcio per borrar les taulas.
 function erase() {
@@ -18,8 +22,11 @@ function inicialitzaJoc() {
 
     // Crea una taula
     const tbl = document.createElement("table");
+    
+    tbl.id = "sdfg"
     const tblBody = document.createElement("tbody");
-
+    
+    
     // Crea els rows
     for (let i = 0; i < rows; i++) {
         const row = document.createElement("tr");
@@ -36,4 +43,26 @@ function inicialitzaJoc() {
     tbl.appendChild(tblBody);
     // Possa la taula en el DIV
     document.getElementById('taula').appendChild(tbl);
+    matriuBinaria(rows, cols);
 }
+
+// esta funcion se guarda en una variable
+let escribir = function escribir(event) {
+    console.log("pepe",eve);
+}
+// matriz binaria
+function matriuBinaria(matrix) {
+    var matrix2 =[];
+    for (var i = 0; i < matrix.length; i++) {
+        for (var j = 0; j < matrix[0].length; j++) {
+            if(matrix2[0].style.backgroundColor == "white"){
+                matrix2[i].push(0);
+            }else{
+                matrix2[i].push(1);
+            }
+        }
+    }
+    return matrix2;
+}
+
+
